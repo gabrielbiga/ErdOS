@@ -1,7 +1,7 @@
 # ErdOS Operating System
 # erdos/Makefile
 # 
-# 25/08/2013 @ 05:10 AM
+# 17/08/2013 @ 05:10 AM
 # Copyright (C) 2013 Gabriel Marinho <gabrielbiga@me.com>
 
 # Compilador C++
@@ -22,6 +22,8 @@ LDFLAGS=-m elf_i386 -T link.ld
 all: clean compilar gerar_disco_grub
 
 compilar:
+	mkdir -p bin/ obj/
+	
 	@echo "Montando assembly do lancador (start.asm)..."
 	$(AS) $(ASFLAGS) start.o start.asm
 	
@@ -41,12 +43,13 @@ compilar:
 
 gerar_disco_grub:
 	@echo "Gerando disco de boot com GRUB..."
+	@echo "Caso ocorra problemas de permissao, rode como root."
 	@echo ""
 	@echo "Copiando boot..."
 	cp boot/grub.img bin/erdos.img
 	
 	@echo "Criando ponto de montagem para imagem..."
-	mkdir /tmp/ponto_montagem_grub_erdos
+	mkdir -p /tmp/ponto_montagem_grub_erdos
 	
 	@echo "Montando grub..."
 	mount -t auto bin/erdos.img /tmp/ponto_montagem_grub_erdos/
