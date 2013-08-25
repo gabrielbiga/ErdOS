@@ -10,10 +10,14 @@ O sistema operacional ErdOS foi escrito em C++ e Netwide Assembly. O mesmo é co
 ---
 
 Por que C++? Não é melhor C para o trabalho?
+
 O sistema operacional ErdOS é um sistema inteiramente para estudo, não focando performace. A escolha de C++ foi devida a flexibilidade de trabalho com paradigmas atuais, como orientação a objetos, utlização de namespaces e etc. Estas técnicas podem ser utilizados livremente dentro do Kernel de ErdOS, reforçando mais ainda seu estudo.
 
-COMPILANDO O SISTEMA:
-** Nota: Não é recomendado o teste de Kernels 'caseiros' em hardwares reais/físicos, pois não é prevista a reação disto. O simples teste pode acabar DANIFICANDO seu equipamento. Caso queira testar, faça por sua conta e risco. O uso de máquinas virtuais não oferece NENHUM risco de dano a sua máquina física. **
+---
+
+Compilando o sistema:
+
+- ** Nota: Não é recomendado o teste de Kernels 'caseiros' em hardwares reais/físicos, pois não é prevista a reação disto. O simples teste pode acabar DANIFICANDO seu equipamento. Caso queira testar, faça por sua conta e risco. O uso de máquinas virtuais não oferece NENHUM risco de dano a sua máquina física. **
 
 Para compilar o ErdOS é incrívelmente simples! O sistema já conta com uma imagem pronta do GRUB 0.5.96 que ja é automáticamente modificada quando seu kernel é linkado corretamente pelo script Makefile.
 
@@ -36,7 +40,8 @@ $ git clone git@github.com:gabrielbiga/ErdOS.git
 Depois de concluído, basta entrar como root e construir o sistema ErdOS
 
 $ su
-# make
+
+ # make
 
 ou
 
@@ -46,10 +51,10 @@ Ao termino, se todo ocorrer bem, será gerado 2 arquivos na pasta bin. O 'erdos.
 
 erdos.img é nada mais do que uma imagem de disquete com seu kernel recentemente gerado atrelado ao GRUB. Você pode gravar a um disquete físico ou testar com o QEMU
 
-# qemu-system-i386 -fda erdos.img
+ # qemu-system-i386 -fda erdos.img
 
 e kernel.bin é seu Kernel compilado. Para testar o Kernel sem precisar usar um bootloader é completamente possível utilizando:
 
-# qemu-system-i386 -kernel kernel.bin
+ # qemu-system-i386 -kernel kernel.bin
 
 Testar o Kernel fora do bootloader é recomendado quando estiver sendo feita modificações, pois tem um carregamento mais simples e mais rápido.
