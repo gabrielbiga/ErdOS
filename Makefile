@@ -39,8 +39,6 @@ compilar:
 	@echo "Linkando Kernel em bin/..."
 	$(LD) $(LDFLAGS) -o bin/kernel.bin obj/start.o obj/main.o obj/io.o
 	
-	@echo $(lol)
-
 gerar_disco_grub:
 	@echo "Gerando disco de boot com GRUB..."
 	@echo "Caso ocorra problemas de permissao, rode como root."
@@ -69,7 +67,7 @@ gerar_disco_grub:
 	@echo ""
 	@echo ""
 	@echo ""
-	@echo "Tudo pronto! Sua imagem de disquete está em bin/"
+	@echo "Tudo pronto! Sua imagem de disquete esta em bin/"
 
 clean:
 	@echo "Limpando..."
