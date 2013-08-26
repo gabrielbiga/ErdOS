@@ -11,7 +11,7 @@ O sistema operacional ErdOS foi escrito em C++ e Netwide Assembly. O mesmo é co
 
 Por que C++? Não é melhor C para o trabalho?
 
-O sistema operacional ErdOS é um sistema inteiramente para estudo, não focando performace. A escolha de C++ foi devida a flexibilidade de trabalho com paradigmas atuais, como orientação a objetos, utlização de namespaces e etc. Estas técnicas podem ser utilizados livremente dentro do Kernel de ErdOS, reforçando mais ainda seu estudo.
+O sistema operacional ErdOS é um sistema inteiramente para estudo, não focando performance. A escolha de C++ foi devida a flexibilidade de trabalho com paradigmas atuais, como orientação a objetos, utlização de namespaces e etc. Estas técnicas podem ser utilizadas livremente dentro do Kernel de ErdOS, reforçando mais ainda seu estudo.
 
 ---
 
